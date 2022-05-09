@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="./dist/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  const opts = {
+    "controls": false,
+    "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "loop": true,
+    "autoplay": true
+  };
+
+  var educationPlayer = new Education.Player('nft-player-wrap', opts);
+  educationPlayer.build();
+
+});
+</script>
+
+<div id="nft-player-wrap"></div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "education-player",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "test": "mocha test/viewing-history.test.js"
+  },
+  "author": "Chris Taylor",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "mocha": "^9.1.3",
+    "request": "^2.88.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}
