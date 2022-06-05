@@ -1,4 +1,4 @@
-# Education Player
+# Build the Education Player
 docker run --rm -w /home/node/app -v $(pwd):/home/node/app node:16 npm run build
 
 ## Lint JavaScript files
