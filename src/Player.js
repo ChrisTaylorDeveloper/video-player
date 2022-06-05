@@ -17,11 +17,24 @@ Player.prototype.build = function () {
   }
   if (this.opts.autoplay) {
     this.videoElement.autoplay = true;
-    // See https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#best_practices
+    // https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#best_practices
     this.videoElement.playsinline = true;
     this.videoElement.muted = true;
+    setInterval(() => this.pressPlay(), 5000); // keep trying to play
   }
   this.videoElementWrapper.appendChild(this.videoElement);
+};
+
+Player.prototype.pressPlay = function () {
+  if (
+    // video has stopped
+    this.videoElement.currentTime > 0
+    && !this.videoElement.paused
+    && !this.videoElement.ended
+    && this.videoElement.readyState > 2
+  ) {
+    this.videoElement.play();
+  }
 };
 
 export { Player };
