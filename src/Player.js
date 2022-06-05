@@ -17,7 +17,7 @@ Player.prototype.build = function () {
   }
   if (this.opts.autoplay) {
     this.videoElement.autoplay = true;
-    // See https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#best_practices
+    // https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#best_practices
     this.videoElement.playsinline = true;
     this.videoElement.muted = true;
   }
