@@ -16,10 +16,10 @@ Player.prototype.build = function () {
     this.videoElement.loop = true;
   }
   if (this.opts.autoplay) {
-    this.videoElement.autoplay = true;
-    // https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#best_practices
-    this.videoElement.playsinline = true;
     this.videoElement.muted = true;
+    this.videoElement.setAttribute('muted', 'muted');
+    this.videoElement.autoplay = true;
+    this.videoElement.playsinline = true;
     setInterval(() => this.pressPlay(), 3000); // keep trying to play
   }
   this.videoElementWrapper.appendChild(this.videoElement);
