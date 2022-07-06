@@ -27,10 +27,10 @@ Player.prototype.build = function () {
 
 Player.prototype.pressPlay = async function () {
   // TODO: Prevent this running on a page where Player doesn't exist.
-  if ( this.videoElement.readyState > 2 ) {
+  if (this.videoElement.readyState > 2) {
     try {
       await this.videoElement.play();
-    } catch(err) {
+    } catch (err) {
       console.log(err);
     }
   }
