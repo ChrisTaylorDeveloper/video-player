@@ -17,7 +17,7 @@ Player.prototype.build = function () {
   }
   if (this.opts.autoplay) {
     this.videoElement.muted = true;
-    this.videoElement.setAttribute('muted', 'muted');
+    this.videoElement.setAttributeNode(document.createAttribute("muted"));
     this.videoElement.autoplay = true;
     this.videoElement.playsinline = true;
     setInterval(() => this.pressPlay(), 3000); // keep trying to play
